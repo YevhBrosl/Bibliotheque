@@ -1,0 +1,68 @@
+21:13:47.680 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\Admin\AppData\Local\JetBrains\IdeaIC2023.3\temp-testng-customsuite.xml
+
+21:13:49.322 [main] INFO  com.bibliotheque.utils.MyListener -- Before navigate to URL --> http://localhost:5173
+21:13:49.524 [main] INFO  com.bibliotheque.utils.MyListener -- After navigate to URL --> http://localhost:5173
+21:13:49.657 [main] INFO  com.bibliotheque.tests.TestBase -- Start test!loginWithNoUppercasePasswordNegativeTest with data: [com.bibliotheque.models.User@3d7b1f1c]
+21:13:49.659 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:13:49.687 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:13:49.744 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:13:49.770 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:13:49.811 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:13:49.829 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:13:49.854 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:13:49.870 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:13:49.961 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:13:49.980 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:13:50.012 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:13:50.029 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:13:50.051 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:13:50.067 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:13:50.105 [main] INFO  com.bibliotheque.utils.MyListener -- Before find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:13:50.124 [main] INFO  com.bibliotheque.utils.MyListener -- After find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:13:50.124 [main] INFO  com.bibliotheque.utils.MyListener -- List size is 1
+21:13:50.143 [main] INFO  com.bibliotheque.tests.TestBase -- PASSED: loginWithNoUppercasePasswordNegativeTest
+21:13:50.143 [main] INFO  com.bibliotheque.tests.TestBase -- Stop test
+21:13:50.143 [main] INFO  com.bibliotheque.tests.TestBase -- =================================================================================================
+21:13:50.144 [main] INFO  com.bibliotheque.tests.TestBase -- Start test!loginWithNoUppercasePasswordNegativeTest with data: [com.bibliotheque.models.User@5bb51241]
+21:13:50.145 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:13:50.163 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:13:50.191 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:13:50.208 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:13:50.234 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:13:50.252 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:13:50.272 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:13:50.284 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:13:50.344 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:13:50.359 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:13:50.386 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:13:50.401 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:13:50.425 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:13:50.436 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:13:50.490 [main] INFO  com.bibliotheque.utils.MyListener -- Before find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:13:50.506 [main] INFO  com.bibliotheque.utils.MyListener -- After find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:13:50.506 [main] INFO  com.bibliotheque.utils.MyListener -- List size is 1
+21:13:50.518 [main] INFO  com.bibliotheque.tests.TestBase -- PASSED: loginWithNoUppercasePasswordNegativeTest
+21:13:50.518 [main] INFO  com.bibliotheque.tests.TestBase -- Stop test
+21:13:50.518 [main] INFO  com.bibliotheque.tests.TestBase -- =================================================================================================
+21:13:50.519 [main] INFO  com.bibliotheque.tests.TestBase -- Start test!loginWithNoUppercasePasswordNegativeTest with data: [com.bibliotheque.models.User@19ee1ae6]
+21:13:50.520 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:13:50.532 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:13:50.559 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:13:50.571 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:13:50.597 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:13:50.610 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:13:50.632 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:13:50.644 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:13:50.707 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:13:50.719 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:13:50.751 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:13:50.762 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:13:50.785 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:13:50.798 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:13:50.849 [main] INFO  com.bibliotheque.utils.MyListener -- Before find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:13:50.861 [main] INFO  com.bibliotheque.utils.MyListener -- After find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:13:50.861 [main] INFO  com.bibliotheque.utils.MyListener -- List size is 1
+21:13:50.870 [main] INFO  com.bibliotheque.tests.TestBase -- PASSED: loginWithNoUppercasePasswordNegativeTest
+21:13:50.871 [main] INFO  com.bibliotheque.tests.TestBase -- Stop test
+21:13:50.871 [main] INFO  com.bibliotheque.tests.TestBase -- =================================================================================================

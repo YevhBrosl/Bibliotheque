@@ -1,0 +1,68 @@
+21:15:46.073 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\Admin\AppData\Local\JetBrains\IdeaIC2023.3\temp-testng-customsuite.xml
+
+21:15:47.675 [main] INFO  com.bibliotheque.utils.MyListener -- Before navigate to URL --> http://localhost:5173
+21:15:47.922 [main] INFO  com.bibliotheque.utils.MyListener -- After navigate to URL --> http://localhost:5173
+21:15:48.054 [main] INFO  com.bibliotheque.tests.TestBase -- Start test!loginWithNoDigitsPasswordNegativeTest with data: [com.bibliotheque.models.User@5017e1]
+21:15:48.056 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:15:48.086 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:15:48.141 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:15:48.169 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:15:48.204 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:15:48.220 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:15:48.244 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:15:48.260 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:15:48.348 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:15:48.368 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:15:48.399 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:15:48.417 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:15:48.437 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:15:48.451 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:15:48.490 [main] INFO  com.bibliotheque.utils.MyListener -- Before find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:15:48.509 [main] INFO  com.bibliotheque.utils.MyListener -- After find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:15:48.510 [main] INFO  com.bibliotheque.utils.MyListener -- List size is 1
+21:15:48.529 [main] INFO  com.bibliotheque.tests.TestBase -- PASSED: loginWithNoDigitsPasswordNegativeTest
+21:15:48.529 [main] INFO  com.bibliotheque.tests.TestBase -- Stop test
+21:15:48.529 [main] INFO  com.bibliotheque.tests.TestBase -- =================================================================================================
+21:15:48.531 [main] INFO  com.bibliotheque.tests.TestBase -- Start test!loginWithNoDigitsPasswordNegativeTest with data: [com.bibliotheque.models.User@74dbb1ee]
+21:15:48.532 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:15:48.549 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:15:48.575 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:15:48.593 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:15:48.622 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:15:48.641 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:15:48.661 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:15:48.673 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:15:48.735 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:15:48.749 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:15:48.774 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:15:48.789 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:15:48.811 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:15:48.824 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:15:48.878 [main] INFO  com.bibliotheque.utils.MyListener -- Before find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:15:48.891 [main] INFO  com.bibliotheque.utils.MyListener -- After find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:15:48.891 [main] INFO  com.bibliotheque.utils.MyListener -- List size is 1
+21:15:48.900 [main] INFO  com.bibliotheque.tests.TestBase -- PASSED: loginWithNoDigitsPasswordNegativeTest
+21:15:48.901 [main] INFO  com.bibliotheque.tests.TestBase -- Stop test
+21:15:48.901 [main] INFO  com.bibliotheque.tests.TestBase -- =================================================================================================
+21:15:48.902 [main] INFO  com.bibliotheque.tests.TestBase -- Start test!loginWithNoDigitsPasswordNegativeTest with data: [com.bibliotheque.models.User@71b6d77f]
+21:15:48.902 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:15:48.914 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:15:48.938 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:15:48.950 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:15:48.979 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:15:48.991 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:15:49.011 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:15:49.022 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:15:49.081 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:15:49.099 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:15:49.126 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:15:49.140 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:15:49.162 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: password
+21:15:49.172 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: password
+21:15:49.223 [main] INFO  com.bibliotheque.utils.MyListener -- Before find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:15:49.234 [main] INFO  com.bibliotheque.utils.MyListener -- After find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:15:49.234 [main] INFO  com.bibliotheque.utils.MyListener -- List size is 1
+21:15:49.243 [main] INFO  com.bibliotheque.tests.TestBase -- PASSED: loginWithNoDigitsPasswordNegativeTest
+21:15:49.244 [main] INFO  com.bibliotheque.tests.TestBase -- Stop test
+21:15:49.244 [main] INFO  com.bibliotheque.tests.TestBase -- =================================================================================================

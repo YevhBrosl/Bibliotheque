@@ -1,0 +1,32 @@
+21:09:55.684 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\Admin\AppData\Local\JetBrains\IdeaIC2023.3\temp-testng-customsuite.xml
+
+21:09:57.286 [main] INFO  com.bibliotheque.utils.MyListener -- Before navigate to URL --> http://localhost:5173
+21:09:57.524 [main] INFO  com.bibliotheque.utils.MyListener -- After navigate to URL --> http://localhost:5173
+21:09:57.653 [main] INFO  com.bibliotheque.tests.TestBase -- Start test!createAccountWithEmptyEmailNegativeTest with data: [com.bibliotheque.models.User@43da41e]
+21:09:57.655 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.cssSelector: .css-1x7a1s3:nth-child(2)
+21:09:57.682 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.cssSelector: .css-1x7a1s3:nth-child(2)
+21:09:57.741 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.id: email
+21:09:57.765 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.id: email
+21:09:57.807 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.id: email
+21:09:57.824 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.id: email
+21:09:57.847 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.id: email
+21:09:57.863 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.id: email
+21:09:57.902 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.id: password
+21:09:57.922 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.id: password
+21:09:57.954 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.id: password
+21:09:57.970 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.id: password
+21:09:57.991 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.id: password
+21:09:58.007 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.id: password
+21:09:58.066 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.id: repeatPassword
+21:09:58.085 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.id: repeatPassword
+21:09:58.115 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.id: repeatPassword
+21:09:58.133 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.id: repeatPassword
+21:09:58.154 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.id: repeatPassword
+21:09:58.170 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.id: repeatPassword
+21:09:58.213 [main] INFO  com.bibliotheque.utils.MyListener -- Before find elements --> By.xpath: //input[@id='email']/following-sibling::div
+21:09:58.233 [main] INFO  com.bibliotheque.utils.MyListener -- After find elements --> By.xpath: //input[@id='email']/following-sibling::div
+21:09:58.234 [main] INFO  com.bibliotheque.utils.MyListener -- List size is 1
+21:09:58.249 [main] INFO  com.bibliotheque.tests.TestBase -- PASSED: createAccountWithEmptyEmailNegativeTest
+21:09:58.250 [main] INFO  com.bibliotheque.tests.TestBase -- Stop test
+21:09:58.250 [main] INFO  com.bibliotheque.tests.TestBase -- =================================================================================================

@@ -1,0 +1,20 @@
+21:11:02.823 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\Admin\AppData\Local\JetBrains\IdeaIC2023.3\temp-testng-customsuite.xml
+
+21:11:04.381 [main] INFO  com.bibliotheque.utils.MyListener -- Before navigate to URL --> http://localhost:5173
+21:11:04.585 [main] INFO  com.bibliotheque.utils.MyListener -- After navigate to URL --> http://localhost:5173
+21:11:04.704 [main] INFO  com.bibliotheque.tests.TestBase -- Start test!loginNegativeWithoutPasswordTest with data: []
+21:11:04.706 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:11:04.735 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.cssSelector: .css-1x7a1s3:nth-child(1)
+21:11:04.795 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:11:04.825 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:11:04.866 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:11:04.883 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:11:04.909 [main] INFO  com.bibliotheque.utils.MyListener -- Before find element --> By.name: email
+21:11:04.928 [main] INFO  com.bibliotheque.utils.MyListener -- After find element --> By.name: email
+21:11:05.017 [main] INFO  com.bibliotheque.utils.MyListener -- Before find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:11:05.039 [main] INFO  com.bibliotheque.utils.MyListener -- After find elements --> By.xpath: //input[@id='password']/following-sibling::div
+21:11:05.039 [main] INFO  com.bibliotheque.utils.MyListener -- List size is 1
+21:11:05.057 [main] INFO  com.bibliotheque.tests.TestBase -- PASSED: loginNegativeWithoutPasswordTest
+21:11:05.057 [main] INFO  com.bibliotheque.tests.TestBase -- Stop test
+21:11:05.057 [main] INFO  com.bibliotheque.tests.TestBase -- =================================================================================================
