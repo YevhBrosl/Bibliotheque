@@ -1,5 +1,0 @@
-17:41:14.209 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
-  C:\Users\Admin\AppData\Local\JetBrains\IdeaIC2023.3\temp-testng-customsuite.xml
-
-17:41:15.811 [main] INFO  com.bibliotheque.utils.MyListener -- Before navigate to URL --> http://localhost:5173
-17:41:16.045 [main] INFO  com.bibliotheque.utils.MyListener -- After navigate to URL --> http://localhost:5173

@@ -4,14 +4,31 @@ import com.bibliotheque.data.UserData;
 import com.bibliotheque.models.User;
 import com.bibliotheque.utils.DataProviders;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginTests extends TestBase{
+    String email = "bertie_wooster@gm.com";
+    String password = "Bertie123$";
+    String confirmPassword = "Bertie123$";
+    String wrongEmail = "bertiewooster@gm.com";
+    String wrongPassword = "Bertie123#";
+
+//    @BeforeClass()
+//    public void createAccountPrecondition() {
+//        if (app.getUser().isSignOutButtonPresent()) {
+//            app.getUser().clickOnSignOutButton();
+//        }
+//        app.getUser().clickOnRegisterLink();
+//        app.getUser().fillInRegistrationForm(email, password, confirmPassword);
+//        app.getUser().clickOnRegisterButton();
+//        app.getUser().clickOnSignOutButton();
+//    }
 
 //    @BeforeMethod
 //    public void ensurePrecondition() {
-//        if (!app.getUser().isLoginLinkPresent()) {
+//        if (app.getUser().isSignOutButtonPresent()) {
 //            app.getUser().clickOnSignOutButton();
 //        }
 //    }
@@ -29,16 +46,14 @@ public class LoginTests extends TestBase{
     @Test()
     public void loginNegativeWithoutEmailTest() {
         app.getUser().clickOnLoginLink();
-        app.getUser().fillInLoginForm(new User()
-                .setPassword(UserData.PASSWORD));
+        app.getUser().fillInLoginFormWithoutEmail(password);
         Assert.assertTrue(app.getUser().isInvalidEmailWarningPresent("Email required"));
     }
 
     @Test()
     public void loginNegativeWithoutPasswordTest() {
         app.getUser().clickOnLoginLink();
-        app.getUser().fillInLoginForm(new User()
-                .setEmail(UserData.EMAIL));
+        app.getUser().fillInLoginFormWithoutPassword(email);
         Assert.assertTrue(app.getUser().isInvalidPasswordWarningPresent("Password required"));
     }
 
@@ -88,6 +103,23 @@ public class LoginTests extends TestBase{
 //    public void loginWithoutRegistrationNegativeTest(User user) {
 //        app.getUser().clickOnLoginLink();
 //        app.getUser().fillInLoginForm(user);
+//        app.getUser().clickOnLoginButton();
 //        Assert.assertTrue(app.getUser().isUserNotFoundErrorPresent());
+//    }
+//
+//    @Test
+//    public void loginWithWrongEmailNegativeTest() {
+//        app.getUser().clickOnLoginLink();
+//        app.getUser().fillInLoginFormWithWrongData(wrongEmail, password);
+//        app.getUser().clickOnLoginButton();
+//        Assert.assertTrue(app.getUser().isUserNotFoundErrorPresent());
+//    }
+//
+//    @Test
+//    public void loginWithWrongPasswordNegativeTest() {
+//        app.getUser().clickOnLoginLink();
+//        app.getUser().fillInLoginFormWithWrongData(email, wrongPassword);
+//        app.getUser().clickOnLoginButton();
+//        Assert.assertTrue(app.getUser().isWrongPasswordErrorPresent());
 //    }
 }

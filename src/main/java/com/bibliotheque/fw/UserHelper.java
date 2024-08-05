@@ -56,5 +56,16 @@ public class UserHelper extends BaseHelper{
         click(By.cssSelector(".css-x0nmhz"));
     }
 
+    public void fillInLoginFormWithWrongData(String email, String password) {
+        type(By.name("email"), email);
+        type(By.name("password"), password);
+    }
 
+    public void fillInLoginFormWithoutEmail(String password) {
+        type(By.name("password"), password);
+    }
+
+    public void fillInLoginFormWithoutPassword(String email) {
+        type(By.name("email"), email);
+    }
 }

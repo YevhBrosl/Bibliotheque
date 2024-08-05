@@ -6,6 +6,7 @@ public class User {
     private String password;
     private String confirmPassword;
 
+
     public String getEmail() {
         return email;
     }
