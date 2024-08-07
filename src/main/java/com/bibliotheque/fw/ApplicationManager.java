@@ -23,6 +23,8 @@ public class ApplicationManager {
 
     LibraryHelper library;
 
+    BookHelper book;
+
     public ApplicationManager(String browser) {
         this.browser = browser;
     }
@@ -48,6 +50,7 @@ public class ApplicationManager {
 
         user = new UserHelper(driver);
         library = new LibraryHelper(driver);
+        book = new BookHelper(driver);
     }
 
     public UserHelper getUser() {
@@ -56,6 +59,10 @@ public class ApplicationManager {
 
     public LibraryHelper getLibrary() {
         return library;
+    }
+
+    public BookHelper getBook() {
+        return book;
     }
 
     public void stop() {

@@ -1,5 +1,6 @@
 package com.bibliotheque.utils;
 
+import com.bibliotheque.models.Book;
 import com.bibliotheque.models.Library;
 import com.bibliotheque.models.User;
 import org.testng.annotations.DataProvider;
@@ -205,6 +206,25 @@ public class DataProviders {
     }
 
     @DataProvider
+    public Iterator<Object[]> registrationWithEmptyPasswordConfirmationFromCsv() throws IOException {
+        List<Object[]> userData = new ArrayList<>();
+
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/emptyPasswordConfirmation.csv")));
+
+        String line = reader.readLine();
+
+        while (line != null) {
+            String[] split = line.split(",");
+
+            userData.add(new Object[]{new User().setEmail(split[0]).setPassword(split[1])});
+            line = reader.readLine();
+        }
+        reader.close();
+
+        return userData.iterator();
+    }
+
+    @DataProvider
     public Iterator<Object[]> loginWithoutRegistrationFromCsv() throws IOException {
         List<Object[]> userData = new ArrayList<>();
 
@@ -240,6 +260,82 @@ public class DataProviders {
         reader.close();
 
         return libraryData.iterator();
+    }
+
+    @DataProvider
+    public Iterator<Object[]> searchByAuthorFromCsv() throws IOException {
+        List<Object[]> bookData = new ArrayList<>();
+
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/author.csv")));
+
+        String line = reader.readLine();
+
+        while (line != null) {
+            String[] split = line.split(",");
+
+            bookData.add(new Object[]{new Book().setAuthor(split[0])});
+            line = reader.readLine();
+        }
+        reader.close();
+
+        return bookData.iterator();
+    }
+
+    @DataProvider
+    public Iterator<Object[]> searchByTitleFromCsv() throws IOException {
+        List<Object[]> bookData = new ArrayList<>();
+
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/title.csv")));
+
+        String line = reader.readLine();
+
+        while (line != null) {
+            String[] split = line.split(",");
+
+            bookData.add(new Object[]{new Book().setTitle(split[0])});
+            line = reader.readLine();
+        }
+        reader.close();
+
+        return bookData.iterator();
+    }
+
+    @DataProvider
+    public Iterator<Object[]> searchByInvalidTitleFromCsv() throws IOException {
+        List<Object[]> bookData = new ArrayList<>();
+
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/searchNegative.csv")));
+
+        String line = reader.readLine();
+
+        while (line != null) {
+            String[] split = line.split(",");
+
+            bookData.add(new Object[]{new Book().setTitle(split[0])});
+            line = reader.readLine();
+        }
+        reader.close();
+
+        return bookData.iterator();
+    }
+
+    @DataProvider
+    public Iterator<Object[]> searchByInvalidAuthorFromCsv() throws IOException {
+        List<Object[]> bookData = new ArrayList<>();
+
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/searchNegative.csv")));
+
+        String line = reader.readLine();
+
+        while (line != null) {
+            String[] split = line.split(",");
+
+            bookData.add(new Object[]{new Book().setAuthor(split[0])});
+            line = reader.readLine();
+        }
+        reader.close();
+
+        return bookData.iterator();
     }
 
 

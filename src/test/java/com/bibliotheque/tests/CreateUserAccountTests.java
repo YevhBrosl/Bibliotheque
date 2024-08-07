@@ -1,5 +1,6 @@
 package com.bibliotheque.tests;
 
+import com.bibliotheque.data.UserData;
 import com.bibliotheque.models.User;
 import com.bibliotheque.utils.DataProviders;
 import org.testng.Assert;
@@ -10,9 +11,20 @@ public class CreateUserAccountTests extends TestBase {
 
 //    @BeforeMethod
 //    public void ensurePrecondition() {
-//        if (!app.getUser().isLoginLinkPresent()) {
+//        if (app.getUser().isSignOutButtonPresent()) {
 //            app.getUser().clickOnSignOutButton();
 //        }
+//    }
+//
+//    @Test(priority = 1)
+//    public void createUniversalAccountPositiveTest() {
+//        app.getUser().clickOnRegisterLink();
+//        app.getUser().fillInCreateAccountForm(new User()
+//                .setEmail(UserData.EMAIL)
+//                .setPassword(UserData.PASSWORD)
+//                .setConfirmPassword(UserData.CONFIRM_PASSWORD));
+//        app.getUser().clickOnRegisterButton();
+//        app.getUser().clickOnSignOutButton();
 //    }
 //
 //    @Test(dataProvider = "addNewUserFromCsv", dataProviderClass = DataProviders.class)
@@ -23,15 +35,8 @@ public class CreateUserAccountTests extends TestBase {
 //        Assert.assertTrue(app.getUser().isSignOutButtonPresent());
 //    }
 //
-//    @Test
+//    @Test(priority = 2)
 //    public void createExistingAccountNegativeTest() {
-//        app.getUser().clickOnRegisterLink();
-//        app.getUser().fillInCreateAccountForm(new User()
-//                .setEmail(UserData.EMAIL)
-//                .setPassword(UserData.PASSWORD)
-//                .setConfirmPassword(UserData.CONFIRM_PASSWORD));
-//        app.getUser().clickOnRegisterButton();
-//        app.getUser().clickOnSignOutButton();
 //        app.getUser().clickOnRegisterLink();
 //        app.getUser().fillInCreateAccountForm(new User()
 //                .setEmail(UserData.EMAIL)
@@ -40,79 +45,76 @@ public class CreateUserAccountTests extends TestBase {
 //        app.getUser().clickOnRegisterButton();
 //        Assert.assertTrue(app.getUser().isExistingUserErrorPresent());
 //    }
-//
+
 
     @Test(dataProvider = "registrationLoginWithInvalidEmailFromCsv", dataProviderClass = DataProviders.class)
     public void createAccountWithInvalidEmailNegativeTest(User user) {
         app.getUser().clickOnRegisterLink();
         app.getUser().fillInCreateAccountForm(user);
-        Assert.assertTrue(app.getUser().isInvalidEmailWarningPresent("Input does not correspond with an email"));
+        Assert.assertTrue(app.getUser().isInvalidEmailWarningPresent());
     }
 
     @Test(dataProvider = "registrationLoginWithShortPasswordFromCsv", dataProviderClass = DataProviders.class)
     public void createAccountWithShortPasswordNegativeTest(User user) {
         app.getUser().clickOnRegisterLink();
         app.getUser().fillInCreateAccountForm(user);
-        Assert.assertTrue(app.getUser().isInvalidPasswordWarningPresent("8 symbols"));
+        Assert.assertTrue(app.getUser().isShortPasswordWarningPresent());
     }
 
     @Test(dataProvider = "registrationLoginWithNoUppercasePasswordFromCsv", dataProviderClass = DataProviders.class)
     public void createAccountWithNoUppercasePasswordNegativeTest(User user) {
         app.getUser().clickOnRegisterLink();
         app.getUser().fillInCreateAccountForm(user);
-        Assert.assertTrue(app.getUser().isInvalidPasswordWarningPresent("capital letter"));
+        Assert.assertTrue(app.getUser().isNoUppercasePasswordWarningPresent());
     }
 
     @Test(dataProvider = "registrationLoginWithNoLowercasePasswordFromCsv", dataProviderClass = DataProviders.class)
     public void createAccountWithNoLowercasePasswordNegativeTest(User user) {
         app.getUser().clickOnRegisterLink();
         app.getUser().fillInCreateAccountForm(user);
-        Assert.assertTrue(app.getUser().isInvalidPasswordWarningPresent("small letter"));
+        Assert.assertTrue(app.getUser().isNoLowercasePasswordWarningPresent());
     }
 
     @Test(dataProvider = "registrationLoginWithNoDigitsPasswordFromCsv", dataProviderClass = DataProviders.class)
     public void createAccountWithNoDigitsPasswordNegativeTest(User user) {
         app.getUser().clickOnRegisterLink();
         app.getUser().fillInCreateAccountForm(user);
-        Assert.assertTrue(app.getUser().isInvalidPasswordWarningPresent("numerical digit"));
+        Assert.assertTrue(app.getUser().isNoDigitsPasswordWarningPresent());
     }
 
     @Test(dataProvider = "registrationLoginWithNoSpecSymbolsPasswordFromCsv", dataProviderClass = DataProviders.class)
     public void createAccountWithNoSpecSymbolsPasswordNegativeTest(User user) {
         app.getUser().clickOnRegisterLink();
         app.getUser().fillInCreateAccountForm(user);
-        Assert.assertTrue(app.getUser().isInvalidPasswordWarningPresent("special symbol"));
+        Assert.assertTrue(app.getUser().isNoSpecialSymbolPasswordWarningPresent());
     }
 
     @Test(dataProvider = "registrationWithNonMatchingPasswordsFromCsv", dataProviderClass = DataProviders.class)
     public void createAccountWithNonMatchingPasswordsNegativeTest(User user) {
         app.getUser().clickOnRegisterLink();
         app.getUser().fillInCreateAccountForm(user);
-        Assert.assertTrue(app.getUser().isFailedPasswordConfirmationWarningPresent("Passwords must coincide"));
+        Assert.assertTrue(app.getUser().isFailedPasswordConfirmationWarningPresent());
     }
 
     @Test(dataProvider = "registrationWithEmptyEmailFromCsv", dataProviderClass = DataProviders.class)
     public void createAccountWithEmptyEmailNegativeTest(User user) {
         app.getUser().clickOnRegisterLink();
         app.getUser().fillInCreateAccountForm(user);
-        Assert.assertTrue(app.getUser().isInvalidEmailWarningPresent("Email required"));
+        Assert.assertTrue(app.getUser().isEmptyEmailWarningPresent());
     }
 
     @Test(dataProvider = "registrationWithEmptyPasswordFromCsv", dataProviderClass = DataProviders.class)
     public void createAccountWithEmptyPasswordNegativeTest(User user) {
         app.getUser().clickOnRegisterLink();
         app.getUser().fillInCreateAccountForm(user);
-        Assert.assertTrue(app.getUser().isInvalidPasswordWarningPresent("Password required"));
+        Assert.assertTrue(app.getUser().isEmptyPasswordWarningPresent());
     }
 
-    @Test
-    public void createAccountWithEmptyPasswordConfirmationNegativeTest() {
-        String email = "valid@gmail.com";
-        String password = "Ve12345$";
-        String confirmPassword = "";
+    @Test(dataProvider = "registrationWithEmptyPasswordConfirmationFromCsv", dataProviderClass = DataProviders.class)
+    public void createAccountWithEmptyPasswordConfirmationNegativeTest(User user) {
         app.getUser().clickOnRegisterLink();
-        app.getUser().fillInRegistrationForm(email, password, confirmPassword);
-        Assert.assertTrue(app.getUser().isFailedPasswordConfirmationWarningPresent("Repeat password is required"));
+        app.getUser().fillInCreateAccountForm(user);
+        Assert.assertTrue(app.getUser().isEmptyPasswordConfirmationWarningPresent());
     }
 
 }

@@ -1,12 +1,25 @@
 package com.bibliotheque.fw;
 
 import com.bibliotheque.models.User;
+import com.bibliotheque.utils.PropertiesLoader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class UserHelper extends BaseHelper{
+    public static final String invalidEmailWarning = PropertiesLoader.loadProperty("invalidEmailWarning");
+    public static final String shortPasswordWarning = PropertiesLoader.loadProperty("shortPasswordWarning");
+    public static final String noUppercasePasswordWarning = PropertiesLoader.loadProperty("noUppercasePasswordWarning");
+    public static final String noLowercasePasswordWarning = PropertiesLoader.loadProperty("noLowercasePasswordWarning");
+    public static final String noDigitsPasswordWarning = PropertiesLoader.loadProperty("noDigitsPasswordWarning");
+    public static final String noSpecialSymbolPasswordWarning = PropertiesLoader.loadProperty("noSpecialSymbolPasswordWarning");
+    public static final String nonMatchingPasswordsWarning = PropertiesLoader.loadProperty("nonMatchingPasswordsWarning");
+    public static final String emptyEmailWarning = PropertiesLoader.loadProperty("emptyEmailWarning");
+    public static final String emptyPasswordWarning = PropertiesLoader.loadProperty("emptyPasswordWarning");
+    public static final String emptyPasswordConfirmationWarning = PropertiesLoader.loadProperty("emptyPasswordConfirmationWarning");
+
+
     public UserHelper(WebDriver driver) {
         super(driver);
     }
@@ -25,24 +38,6 @@ public class UserHelper extends BaseHelper{
         click(By.cssSelector(".css-x0nmhz"));
     }
 
-    public boolean isInvalidEmailWarningPresent(String text) {
-        return isTextPresent(By.xpath("//input[@id='email']/following-sibling::div"), text);
-    }
-
-    public boolean isInvalidPasswordWarningPresent(String text) {
-        return isTextPresent(By.xpath("//input[@id='password']/following-sibling::div"), text);
-    }
-
-    public boolean isFailedPasswordConfirmationWarningPresent(String text) {
-        return isTextPresent(By.xpath("//input[@id='repeatPassword']/following-sibling::div"), text);
-    }
-
-    public void fillInRegistrationForm(String email, String password, String confirmPassword) {
-        type(By.id("email"), email);
-        type(By.id("password"), password);
-        type(By.id("repeatPassword"), confirmPassword);
-    }
-
     public void clickOnLoginLink() {
         click(By.cssSelector(".css-1x7a1s3:nth-child(1)"));
     }
@@ -56,16 +51,44 @@ public class UserHelper extends BaseHelper{
         click(By.cssSelector(".css-x0nmhz"));
     }
 
-    public void fillInLoginFormWithWrongData(String email, String password) {
-        type(By.name("email"), email);
-        type(By.name("password"), password);
+    public boolean isInvalidEmailWarningPresent() {
+        return isTextPresent(By.xpath("//input[@id='email']/following-sibling::div"), invalidEmailWarning);
     }
 
-    public void fillInLoginFormWithoutEmail(String password) {
-        type(By.name("password"), password);
+    public boolean isShortPasswordWarningPresent() {
+        return isTextPresent(By.xpath("//input[@id='password']/following-sibling::div"), shortPasswordWarning);
     }
 
-    public void fillInLoginFormWithoutPassword(String email) {
-        type(By.name("email"), email);
+    public boolean isNoUppercasePasswordWarningPresent() {
+        return isTextPresent(By.xpath("//input[@id='password']/following-sibling::div"), noUppercasePasswordWarning);
     }
+
+    public boolean isNoLowercasePasswordWarningPresent() {
+        return isTextPresent(By.xpath("//input[@id='password']/following-sibling::div"), noLowercasePasswordWarning);
+    }
+
+    public boolean isNoDigitsPasswordWarningPresent() {
+        return isTextPresent(By.xpath("//input[@id='password']/following-sibling::div"), noDigitsPasswordWarning);
+    }
+
+    public boolean isNoSpecialSymbolPasswordWarningPresent() {
+        return isTextPresent(By.xpath("//input[@id='password']/following-sibling::div"), noSpecialSymbolPasswordWarning);
+    }
+
+    public boolean isFailedPasswordConfirmationWarningPresent() {
+        return isTextPresent(By.xpath("//input[@id='repeatPassword']/following-sibling::div"), nonMatchingPasswordsWarning);
+    }
+
+    public boolean isEmptyEmailWarningPresent() {
+        return isTextPresent(By.xpath("//input[@id='email']/following-sibling::div"), emptyEmailWarning);
+    }
+
+    public boolean isEmptyPasswordWarningPresent() {
+        return isTextPresent(By.xpath("//input[@id='password']/following-sibling::div"), emptyPasswordWarning);
+    }
+
+    public boolean isEmptyPasswordConfirmationWarningPresent() {
+        return isTextPresent(By.xpath("//input[@id='repeatPassword']/following-sibling::div"), emptyPasswordConfirmationWarning);
+    }
+
 }

@@ -5,7 +5,13 @@ public class User {
     private String email;
     private String password;
     private String confirmPassword;
-
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private String country;
+    private String city;
+    private String zip;
+    private String house;
 
     public String getEmail() {
         return email;
