@@ -39,7 +39,7 @@ public class TestBase {
         logger.info("=================================================================================================");
     }
 
-    @AfterSuite(enabled = false)
+    @AfterSuite(enabled = true)
     public void tearDown() {
         app.stop();
     }

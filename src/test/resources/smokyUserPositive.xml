@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SmokyPositiveTest" verbose="1">
+    <test name="PositiveUser">
+        <classes>
+            <class name="com.bibliotheque.tests.LoginTests">
+                <methods>
+                    <exclude name=".*Negative.*"/>
+                </methods>
+            </class>
+            <class name="com.bibliotheque.tests.BookSearchTests">
+                <methods>
+                    <exclude name=".*Negative.*"/>
+                </methods>
+            </class>
+            <class name="com.bibliotheque.tests.BookReservationTests"/>
+        </classes>
+    </test>
+
+</suite>

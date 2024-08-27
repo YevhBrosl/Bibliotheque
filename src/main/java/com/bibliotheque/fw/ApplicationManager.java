@@ -3,6 +3,7 @@ package com.bibliotheque.fw;
 import com.bibliotheque.utils.MyListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
@@ -24,6 +25,8 @@ public class ApplicationManager {
     LibraryHelper library;
 
     BookHelper book;
+
+    AdminHelper admin;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -51,6 +54,7 @@ public class ApplicationManager {
         user = new UserHelper(driver);
         library = new LibraryHelper(driver);
         book = new BookHelper(driver);
+        admin = new AdminHelper(driver);
     }
 
     public UserHelper getUser() {
@@ -63,6 +67,10 @@ public class ApplicationManager {
 
     public BookHelper getBook() {
         return book;
+    }
+
+    public AdminHelper getAdmin() {
+        return admin;
     }
 
     public void stop() {

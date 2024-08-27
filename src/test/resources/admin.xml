@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AdminTest" verbose="1">
+    <test name="PositiveAdmin">
+        <classes>
+            <class name="com.bibliotheque.tests.AdminTests">
+                <methods>
+                    <exclude name=".*Negative.*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

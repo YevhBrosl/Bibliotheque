@@ -271,9 +271,7 @@ public class DataProviders {
         String line = reader.readLine();
 
         while (line != null) {
-            String[] split = line.split(",");
-
-            bookData.add(new Object[]{new Book().setAuthor(split[0])});
+            bookData.add(new Object[]{new Book().setAuthorSurname(line)});
             line = reader.readLine();
         }
         reader.close();
@@ -290,9 +288,7 @@ public class DataProviders {
         String line = reader.readLine();
 
         while (line != null) {
-            String[] split = line.split(",");
-
-            bookData.add(new Object[]{new Book().setTitle(split[0])});
+            bookData.add(new Object[]{new Book().setTitle(line)});
             line = reader.readLine();
         }
         reader.close();
@@ -309,9 +305,7 @@ public class DataProviders {
         String line = reader.readLine();
 
         while (line != null) {
-            String[] split = line.split(",");
-
-            bookData.add(new Object[]{new Book().setTitle(split[0])});
+            bookData.add(new Object[]{new Book().setTitle(line)});
             line = reader.readLine();
         }
         reader.close();
@@ -328,9 +322,24 @@ public class DataProviders {
         String line = reader.readLine();
 
         while (line != null) {
-            String[] split = line.split(",");
+            bookData.add(new Object[]{new Book().setAuthorSurname(line)});
+            line = reader.readLine();
+        }
+        reader.close();
 
-            bookData.add(new Object[]{new Book().setAuthor(split[0])});
+        return bookData.iterator();
+    }
+
+    @DataProvider
+    public Iterator<Object[]> searchByInvalidIsbnFromCsv() throws IOException {
+        List<Object[]> bookData = new ArrayList<>();
+
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/searchNegative.csv")));
+
+        String line = reader.readLine();
+
+        while (line != null) {
+            bookData.add(new Object[]{new Book().setIsbn(line)});
             line = reader.readLine();
         }
         reader.close();

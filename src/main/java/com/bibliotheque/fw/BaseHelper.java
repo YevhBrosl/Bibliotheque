@@ -29,6 +29,11 @@ public class BaseHelper {
         return false;
     }
 
+    public boolean shouldHaveText(WebElement element, String text, int time) {
+        return new WebDriverWait(driver, Duration.ofSeconds(time))
+                .until(driver -> element.getText().toLowerCase().contains(text.toLowerCase()));
+    }
+
     public void type(By locator, String text) {
         if (text != null) {
             click(locator);
@@ -61,4 +66,5 @@ public class BaseHelper {
 
         return screenshot.getAbsolutePath();
     }
+
 }
